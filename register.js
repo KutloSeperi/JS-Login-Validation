@@ -10,7 +10,8 @@ submitBtn.onclick = (e) => {
 const formData = {
 
     username: username.value,
-    password: password.value
+    password: password.value,
+    retryPassword: retryPassword.value
 }
 
 
@@ -21,6 +22,20 @@ function saveFormData (formData) {
 
     storedFormData.push(formData);
     localStorage.setItem('formData', JSON.stringify(storedFormData));
-}
+
+
+if(formData.password == formData.retryPassword){
+    console.log("Correct")
+
+} else {
+console.log("Please")
 
 }
+
+
+
+}
+}
+
+
+
