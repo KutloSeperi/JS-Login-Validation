@@ -15,27 +15,42 @@ const formData = {
 }
 
 
-saveFormData(formData);
+
+const response = saveFormData(formData);
+
+}
+
+
 
 function saveFormData (formData) {
+   
+
+if(formData.password == formData.retryPassword){
+    
+    console.log("Correct")
     const storedFormData = JSON.parse(localStorage.getItem('formData')) || [];
 
+    const userExists = some.storedFormData(function(user){
+        return 
+    });
+
+    if (userExists===)
     storedFormData.push(formData);
     localStorage.setItem('formData', JSON.stringify(storedFormData));
 
-
-if(formData.password == formData.retryPassword){
-    console.log("Correct")
-
+    
+    return { message: "Incorrect  password", saveFormData: true };
 } else {
-console.log("Please")
+    console.log("incorrect")
+    return { message: "Incorrect  password", saveFormData: false };
+    
 
 }
 
 
 
 }
-}
+
 
 
 
